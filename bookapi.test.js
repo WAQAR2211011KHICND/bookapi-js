@@ -1,5 +1,4 @@
 const Bookapi = require('./Bookapi');
-
 const  {ReadingList, Book } = Bookapi;
 
 describe('Book Api testing',()=>{
@@ -33,7 +32,7 @@ describe('Book Api testing',()=>{
         
         //Assert
         expect(actual).toBe(1);
-
+        cut.resetReadingList();
     })
 
 
@@ -47,7 +46,6 @@ describe('Book Api testing',()=>{
         
         let book1 = new Book("The Hobbit", "J.R.R. Tolkein", 350, 1937);
         let book2 = new Book("Alices Adventures in Wonderland ", "Lewis Carroll", 544, 1865);
-        // let books = [book1, book2];
         cut.addBook(book1, "January 1, 2020", 5);
         cut.addBook(book2, "May 22, 1992", 4);
 
@@ -55,10 +53,10 @@ describe('Book Api testing',()=>{
         let actual = cut.numberRead();
         
         //Assert
-        // expect(actual).toBe(books.length);
         expect(actual).toBe(2);
-
+        cut.resetReadingList();
     })
 
 
+  
 })

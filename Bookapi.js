@@ -25,16 +25,18 @@
             },
 
             addBook: function(book, dateRead, rating){
-
-                // this.BookItem = 
                 this.BookItem.push({book, dateRead, rating})
-                // , ...this.BookItem];
             },
 
             numberRead: function(){
                 return this.BookItem.length;
-            }
+            },
 
+            //Because we have use the object pattern instead of class we have to reset the object (readingList)
+
+            resetReadingList: function(){
+                this.BookItem = [];
+            }
         };
 
 
