@@ -17,20 +17,22 @@
 
         let ReadingList = {
             
-
+            BookItem : [],
 
             getBooks: function(){
 
                 return [];
-            }
+            },
 
-            addBook: function(){
+            addBook: function(book, dateRead, rating){
 
-
-            }
+                // this.BookItem = 
+                this.BookItem.push({book, dateRead, rating})
+                // , ...this.BookItem];
+            },
 
             numberRead: function(){
-                
+                return this.BookItem.length;
             }
 
         };
