@@ -8,13 +8,16 @@ describe('Book Api testing',()=>{
     test('when i first visit site it will be empty',()=>{
         
         //Arrange
-         let cut =  ReadingList;
+        let cut =  ReadingList;
 
         //Act 
         let bookList = cut.getBooks();
         
         //Assert
-        expect(bookList.length()).toBe(0);
+        expect(bookList.length).toBe(0);
 
     })
+
+
+    
 })

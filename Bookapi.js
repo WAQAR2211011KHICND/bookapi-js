@@ -1,7 +1,13 @@
 
-
-        let ReadingList;
-
         let Book ;
 
-        module.export = { ReadingList , Book };
+        let ReadingList = {
+            
+            getBooks: function(){
+
+                return [];
+            }
+        };
+
+
+        module.exports = { ReadingList , Book };
